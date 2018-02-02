@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+
+
+	<head>
+	
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="main.css"/>
+		<link rel="stylesheet" type="text/css" href="modal.css"/> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<title>The Ant Nest</title>
+		
+	</head>
+	
+	<!-- Keepin' stuff somewhat organised -->
+	
+	<body>
+	<!-- Navbar code -->
+	
+	<nav>
+		<ul>
+		
+			<li> <a href="index.html">Home</a> </li>
+			<li> <a href="facts.html">Facts</a> </li>
+			<li> <a href="life_cycle.html">Life Cycle</a> </li>
+			<li> <a href="nest.html">Nest</a> </li>
+		
+		</ul>
+	</nav>
+	<!-- End Navbar code -->		
+	
+	<!-- Main Content -->
+	<div id="content">
+	
+		<h1> Ant Facts </h1>
+		<p>Let's Learn About Ants</p>
+		
+		<!-- Modal Image -->
+		
+		<img class="myImg" src="images/img1.png" alt="Test Image" width="300" height="200">
+		
+		<h1>Bigger Better Butts</h1>
+		
+		<img class="myImg" src="images/img2.png" alt="Test Image" width="300" height="200">
+		
+		<!-- The Modal Box -->
+		
+		<div id="myModal" class="modal">
+			<span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+			
+			<img class="modal-content" id="img01">
+			<div id="caption"></div>
+						
+		</div>
+		
+		
+		<h1>Big Ol' Butts</h1>
+		
+				
+		<script>
+		var modal = document.getElementById('myModal');
+		
+		var img = $('myImg')
+		var modalImg = $("#img01")
+		var captionText = document.getElementById("caption")
+		$(' .myImg').click(function(){
+			modal.style.display = "block";
+			var newSrc = this.src;	
+			modalImg.attr('src', newSrc);
+			captionText.innerHTML = this.alt;
+		});
+
+		var span = document.getElementsByClassName("close")[0];
+		
+		span.onclick = function(){
+			modal.style.display = "none";
+		}
+		
+		</script>
+			
+						
+			
+	</div>
+	<!-- End Main Content-->
+			
+	</body>
+
+	<!-- Footer code -->
+
+	<footer>
+	
+	This website has been created as part of an assignment in an 	approved course of study for Curtin University and contains 	copyright material not created by the author. All copyright 	material used remains copyright of the respective owners and 	has been used here pursuant to Section 40 of the Copyright Act 	1968 (Commonwealth of Australia). No part of this work may be 	reproduced without consent of the original copyright owners. 	See code comments for references.
+	
+	</footer>	
+	
+</html>

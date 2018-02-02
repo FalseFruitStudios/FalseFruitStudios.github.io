@@ -1,0 +1,44 @@
+/*Container needed to position Overlay*/
+.container{
+	position: relative;
+	width:50%;
+}
+
+/* Image Responsive*/
+.image1 .image2 .image3{
+	display:block;
+	width: 100%;
+	height: auto;
+}
+
+/* Overlay Effect */
+.overlay{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #008CBA;
+	overflow: hidden;
+	width: 100%;
+	-webkit-transform:scale(0);
+	transition: .6s ease;
+	text-align: center;
+}
+
+/* Mouseover */
+.container:hover .overlay{
+	transform:scale(1);
+}
+
+/* Overlay text */
+.text{
+	color:#999;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+}
